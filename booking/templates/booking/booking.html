@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'booking/css/booking.css' %}" />
+{% endblock %}
+
 {% block title %}Réservation{% endblock %}
 
 {% block content %}
-  <h1>Page de reservation</h1>
+  <h1>Page de réservation</h1>
   <form action="{% url "booking" %}" method="post">
     {% csrf_token %}
     <div><p class="msg">{{ msg }}</p></div>

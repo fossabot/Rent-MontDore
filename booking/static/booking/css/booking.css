@@ -1,0 +1,17 @@
+form div {
+  margin: 10px 0px;
+}
+
+form img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.error {
+  display: inline;
+}
+
+.error li {
+  color: red;
+  display: inline;
+}

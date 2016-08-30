@@ -38,9 +38,3 @@ class BookingForm(forms.Form):
             self.add_error('email_address', 'Entrer votre adresse e-mail')
 
         return cleaned_data
-
-
-class ContactForm(forms.Form):
-    sujet = forms.CharField(max_length=100)
-    message = forms.CharField(widget=forms.Textarea)
-    envoyeur = forms.EmailField(label="Votre adresse mail")

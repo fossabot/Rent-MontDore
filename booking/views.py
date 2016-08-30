@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
@@ -6,7 +6,8 @@ from .forms import BookingForm
 from .models import Booking
 
 def home(request):
-    return render(request, 'booking/home.html')
+    return redirect('booking')
+    #return render(request, 'booking/home.html')
 
 def booking(request):
     if request.method == 'POST':
