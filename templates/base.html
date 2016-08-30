@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    {% block stylesheet %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <img src="{% static 'img/header-img.jpg' %}" alt="Panorama montagne" >
+    </header>
+    <nav id="header">
+      <ul>
+        <li><a href="{% url "home" %}">Accueil</a></li>
+      </ul>
+      {% block nav %}
+      {% endblock %}
+    </nav>
+    <section id="body">
+      {% block content %}{% endblock %}
+    </section>
+    <footer>
+      <a href="{% url "home" %}">Location Mont Dore</a>
+    </footer>
+  </body>
+</html>
