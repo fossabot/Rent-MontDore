@@ -6,8 +6,8 @@
   <h1>Calendrier</h1>
   {% for booking in bookings %}
     <div class="booking">
-      <p>Arrivée: {{ booking.coming_date|date:"d m Y" }}</p>
-      <p>Départ: {{ booking.leaving_date|date:"d m Y" }}</p>
+      <p>Arrivée: {{ booking.coming_date|date:"d/m/Y" }}</p>
+      <p>Départ: {{ booking.leaving_date|date:"d/m/Y" }}</p>
       {% if admin %}
         <h2>{{ booking.last_name }}, {{ booking.first_name }}</h2>
         <p>Email: {{ booking.email_address }}</p>
