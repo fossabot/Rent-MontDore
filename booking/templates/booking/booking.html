@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Réservation{% endblock %}
+
+{% block content %}
+  <h1>Page de reservation</h1>
+  <form action="{% url "booking" %}" method="post">
+    {% csrf_token %}
+    <div><p class="msg">{{ msg }}</p></div>
+    {{ form.non_field_errors }}
+    {% for field in form %}
+      <div>
+        {{ field.label_tag }}
+        {{ field }}
+
+        {% if field.help_text %}
+          <img src="{% static 'booking/img/help_text.png' %}" alt="help text" title="{{ field.help_text|safe }}">
+        {% endif %}
+
+        {% if field.errors %}
+        <ul class="error">
+          {% for error in field.errors %}
+          <li>{{ error|escape }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    {% endfor %}
+    <div><input type="submit" value="Réserver!" /></div>
+  </form>
+
+{% endblock %}

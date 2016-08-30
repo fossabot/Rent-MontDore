@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Calendrier{% endblock %}
+
+{% block content %}
+  <h1>Calendrier</h1>
+  {% for booking in bookings %}
+    <div class="booking">
+      <p>Arrivée: {{ booking.coming_date|date:"d m Y" }}</p>
+      <p>Départ: {{ booking.leaving_date|date:"d m Y" }}</p>
+      {% if admin %}
+        <h2>{{ booking.last_name }}, {{ booking.first_name }}</h2>
+        <p>Email: {{ booking.email_address }}</p>
+        <p>Cure:
+          {% if booking.cure %}
+            oui
+          {% else %}
+            non
+          {% endif %}
+        </p>
+      {% endif %}
+  {% empty %}
+    <p>Aucune réservation.</p>
+  </div>
+  {% endfor %}
+{% endblock %}

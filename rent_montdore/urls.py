@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin51/', admin.site.urls),
-    url(r'', include('presentation.urls')),
+    url(r'^', include('presentation.urls')),
+    url(r'^reserver/', include('booking.urls')),
 ]
