@@ -28,7 +28,7 @@ table {
 }
 /* HTML5 display-role reset for older browsers */
 
-#header ul {
+nav ul {
   width: 25%;
   background-color: #eee;
   height: 100%;
@@ -36,19 +36,21 @@ table {
   overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
-#header li a {
+nav a {
   display: block;
   text-decoration: none;
   padding: 16px 8px;
   color: #333;
 }
 
-#header li a:hover {
+nav a:hover {
   background-color: #aaa;
   color: white;
 }
 
-#header .active {
+#nav-presentation .nav-presentation,
+#nav-booking .nav-booking,
+#nav-pictures .nav-pictures {
   background-color: #aaa;
 }
 

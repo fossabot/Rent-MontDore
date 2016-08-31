@@ -12,15 +12,14 @@
     <header>
       <img src="{% static 'img/header-img.png' %}" alt="Panorama montagne" >
     </header>
-    <nav id="header">
+    <nav id="nav-{% block header %}generic{% endblock %}">
       <ul>
-        <li><a href="{% url "home" %}">Accueil</a></li>
-        <li><a href="{% url "booking-home" %}">Réserver</a></li>
+        <li><a class="nav-presentation" href="{% url "home" %}">Accueil</a></li>
+        <li><a class="nav-booking" href="{% url "booking-home" %}">Réserver</a></li>
       </ul>
-      {% block nav %}
-      {% endblock %}
     </nav>
     <section id="body">
+      {% block navbar %}{% endblock %}
       {% block content %}{% endblock %}
     </section>
     <footer>

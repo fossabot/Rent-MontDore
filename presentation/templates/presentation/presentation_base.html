@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'presentation/css/presentation.css' %}" />
+{% endblock %}
+
+{% block header %}presentation{% endblock %}
+
+{% block navbar %}
+  <div class="navbar">
+    <ul>
+      <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}>
+        <a href="{% url "home" %}">Clic here</a>
+      </li>
+      <li {% if request.resolver_match.url_name == "description" %}class="active"{% endif %}>
+        <a href="{% url "description" %}">Déscription</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+.navbar a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px;
+  color: #333;
+}
+
+.navbar a:hover {
+  background-color: #aaa;
+  color: white;
+}
+
+.active a {
+  color: green;
+}
