@@ -10,12 +10,12 @@ urlpatterns = [
         name='home'
     ),
     url(
-        r'^description$',
+        r'^presentation/description$',
         TemplateView.as_view(template_name='presentation/description.html'),
         name='description'
     ),
     url(
-        r'^acces$',
+        r'^presentation/acces$',
         TemplateView.as_view(template_name='presentation/entrance.html'),
         name='entrance'
     ),
