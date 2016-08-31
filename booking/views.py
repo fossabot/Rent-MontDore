@@ -5,10 +5,6 @@ from django.shortcuts import render, redirect
 from .forms import BookingForm
 from .models import Booking
 
-def home(request):
-    return redirect('booking')
-    #return render(request, 'booking/home.html')
-
 def booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)

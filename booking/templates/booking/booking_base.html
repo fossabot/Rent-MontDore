@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load static %}
 
 {% block stylesheet %}
-<link rel="stylesheet" href="{% static 'presentation/css/booking.css' %}" />
+<link rel="stylesheet" href="{% static 'css/apps.css' %}" />
+<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}" />
 {% endblock %}
 
 {% block header %}booking{% endblock %}
 {% block navbar %}
   <div class="navbar">
     <ul>
-      <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}>
-        <a href="{% url "home" %}">Accueil</a>
+      <li {% if request.resolver_match.url_name == "booking-home-price" %}class="active"{% endif %}>
+        <a href="{% url "booking-home-price" %}">Tarifs</a>
       </li>
-      <li {% if request.resolver_match.url_name == "description" %}class="active"{% endif %}>
-        <a href="{% url "description" %}">Déscription</a>
+      <li {% if request.resolver_match.url_name == "booking" %}class="active"{% endif %}>
+        <a href="{% url "booking" %}">Réservation</a>
       </li>
-      <li {% if request.resolver_match.url_name == "entrance" %}class="active"{% endif %}>
-        <a href="{% url "entrance" %}">Accès</a>
+      <li {% if request.resolver_match.url_name == "calendar" %}class="active"{% endif %}>
+        <a href="{% url "calendar" %}">Disponibilités</a>
       </li>
     </ul>
   </div>

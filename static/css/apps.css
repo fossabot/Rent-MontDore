@@ -1,0 +1,25 @@
+.navbar {
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 5px 20px;
+  color: #333;
+  margin: 0px 10px;
+}
+
+.navbar a:hover {
+  background-color: #aaa;
+  color: white;
+}
+
+.active a {
+  background-color: #aaa;
+}
