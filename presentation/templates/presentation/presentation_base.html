@@ -11,10 +11,13 @@
   <div class="navbar">
     <ul>
       <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}>
-        <a href="{% url "home" %}">Clic here</a>
+        <a href="{% url "home" %}">Accueil</a>
       </li>
       <li {% if request.resolver_match.url_name == "description" %}class="active"{% endif %}>
         <a href="{% url "description" %}">Déscription</a>
+      </li>
+      <li {% if request.resolver_match.url_name == "entrance" %}class="active"{% endif %}>
+        <a href="{% url "entrance" %}">Accès</a>
       </li>
     </ul>
   </div>
