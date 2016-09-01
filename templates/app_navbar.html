@@ -1,9 +1,0 @@
-<div class="navbar">
-  <ul>
-    {% for pagename, title in menus %}
-      <li {% if request.resolver_match.url_name == "{{pagename}}" %}class="active"{% endif %}>
-        <a href="{% url "{{pagename}}" %}">{{title}}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>

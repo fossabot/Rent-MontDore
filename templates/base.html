@@ -19,8 +19,8 @@
         <li><a class="nav-booking" href="{% url "booking-home-price" %}">Réserver</a></li>
       </ul>
     </nav>
+    {% block navbar %}{% endblock %}
     <section id="body">
-      {% block navbar %}{% endblock %}
       {% block content %}{% endblock %}
     </section>
     <footer>

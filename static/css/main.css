@@ -1,8 +1,14 @@
-nav ul {
+nav {
   width: 25%;
+}
+
+nav, .navbar {
+  display: inline-block;
+}
+
+nav ul {
   background-color: #eee;
   height: 100%;
-  position: fixed; /* Make it stick, even on scroll */
   overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
@@ -42,10 +48,6 @@ h1 {
 
 footer {
   text-align: center;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  padding: 1px;
 }
 
 footer a, footer p {
