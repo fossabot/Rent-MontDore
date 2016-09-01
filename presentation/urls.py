@@ -19,4 +19,9 @@ urlpatterns = [
         TemplateView.as_view(template_name='presentation/entrance.html'),
         name='entrance'
     ),
+    url(
+        r'^webmaster$',
+        TemplateView.as_view(template_name='presentation/webmaster.html'),
+        name='webmaster'
+    ),
 ]

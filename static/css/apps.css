@@ -1,17 +1,17 @@
-.app-navbar {
+nav .app-navbar {
   margin-left: 25%;
 }
 
-.app-navbar li {
+nav .app-navbar li {
   display: inline-block;
 }
 
-.app-navbar a {
+nav .app-navbar a {
   border-radius: 5px;
   padding: 5px 20px;
   margin: 0px 10px;
 }
 
-.active a {
+nav .active a {
   background-color: #aaa;
 }

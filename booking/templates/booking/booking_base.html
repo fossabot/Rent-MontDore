@@ -7,19 +7,18 @@
 <link rel="stylesheet" href="{% static 'booking/css/booking.css' %}" />
 {% endblock %}
 
-{% block header %}booking{% endblock %}
+{% block navname %}booking{% endblock %}
+
 {% block navbar %}
-  <div class="navbar">
-    <ul>
-      <li {% if request.resolver_match.url_name == "booking-home-price" %}class="active"{% endif %}>
-        <a href="{% url "booking-home-price" %}">Tarifs</a>
-      </li>
-      <li {% if request.resolver_match.url_name == "booking" %}class="active"{% endif %}>
-        <a href="{% url "booking" %}">Réservation</a>
-      </li>
-      <li {% if request.resolver_match.url_name == "calendar" %}class="active"{% endif %}>
-        <a href="{% url "calendar" %}">Disponibilités</a>
-      </li>
-    </ul>
-  </div>
+  <ul class="app-navbar">
+    <li {% if request.resolver_match.url_name == "booking-home-price" %}class="active"{% endif %}>
+      <a href="{% url "booking-home-price" %}">Tarifs</a>
+    </li>
+    <li {% if request.resolver_match.url_name == "booking" %}class="active"{% endif %}>
+      <a href="{% url "booking" %}">Réservation</a>
+    </li>
+    <li {% if request.resolver_match.url_name == "calendar" %}class="active"{% endif %}>
+      <a href="{% url "calendar" %}">Disponibilités</a>
+    </li>
+  </ul>
 {% endblock %}

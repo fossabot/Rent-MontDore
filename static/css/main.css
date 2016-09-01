@@ -1,14 +1,19 @@
+header img {
+  width: 100%;
+  height: 100%;
+}
+
 nav ul {
   vertical-align: middle;
   display: inline-block;
 }
 
 nav .main-navbar {
-  background-color: #eee;
   width: 25%;
 }
 
 nav a {
+  background-color: #eee;
   display: block;
   text-decoration: none;
   padding: 16px 8px;
@@ -26,15 +31,10 @@ nav a:hover {
   background-color: #aaa;
 }
 
-#body {
-  width: auto;
+section {
   margin-left: 25%;
-  padding: 17px;
-}
-
-header img {
-  width: 100%;
-  height: 100%;
+  margin-right: 15%;
+  min-height: 460px;
 }
 
 h1 {
@@ -44,10 +44,11 @@ h1 {
 
 footer {
   text-align: center;
+  margin-top: 20px;
 }
 
 footer a, footer p {
-  margin: 5px 50px;
+  margin: 15px 50px;
   display: inline-block;
   color: currentColor;
   text-decoration: none;
