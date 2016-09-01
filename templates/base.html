@@ -13,13 +13,13 @@
     <header>
       <img src="{% static 'img/header-img.png' %}" alt="Panorama montagne" >
     </header>
-    <nav id="nav-{% block header %}generic{% endblock %}">
-      <ul>
+    <nav>
+      <ul class="main-navbar nav-{% block header %}generic{% endblock %}">
         <li><a class="nav-presentation" href="{% url "home" %}">Accueil</a></li>
         <li><a class="nav-booking" href="{% url "booking-home-price" %}">Réserver</a></li>
       </ul>
+      {% block navbar %}{% endblock %}
     </nav>
-    {% block navbar %}{% endblock %}
     <section id="body">
       {% block content %}{% endblock %}
     </section>

@@ -1,15 +1,11 @@
-nav {
-  width: 25%;
-}
-
-nav, .navbar {
+nav ul {
+  vertical-align: middle;
   display: inline-block;
 }
 
-nav ul {
+nav .main-navbar {
   background-color: #eee;
-  height: 100%;
-  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  width: 25%;
 }
 
 nav a {
@@ -24,9 +20,9 @@ nav a:hover {
   color: white;
 }
 
-#nav-presentation .nav-presentation,
-#nav-booking .nav-booking,
-#nav-pictures .nav-pictures {
+.nav-presentation .nav-presentation,
+.nav-booking .nav-booking,
+.nav-pictures .nav-pictures {
   background-color: #aaa;
 }
 

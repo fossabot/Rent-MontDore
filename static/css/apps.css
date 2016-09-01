@@ -1,24 +1,15 @@
-.navbar {
-  text-align: center;
+.app-navbar {
   margin-left: 25%;
 }
 
-.navbar li {
+.app-navbar li {
   display: inline-block;
 }
 
-.navbar a {
-  text-decoration: none;
-  background-color: #eee;
+.app-navbar a {
   border-radius: 5px;
   padding: 5px 20px;
-  color: #333;
   margin: 0px 10px;
-}
-
-.navbar a:hover {
-  background-color: #aaa;
-  color: white;
 }
 
 .active a {
