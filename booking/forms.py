@@ -3,16 +3,12 @@ import datetime
 from django import forms
 
 from booking.models import Booking
+from booking.data import MONTHS
 
 class BookingForm(forms.Form):
     last_name = forms.CharField(label='Votre nom', max_length=42, error_messages={'required': 'Entrer votre Nom.'})
     first_name = forms.CharField(label='Votre prénom', max_length=42, error_messages={'required': 'Entrer votre prénom.'})
 
-    MONTHS = {
-        1:('Janvier'), 2:('Février'), 3:('Mars'), 4:('Avril'),
-        5:('Mai'), 6:('Juin'), 7:('Juilllet'), 8:('Aout'),
-        9:('Septembre'), 10:('Octobre'), 11:('Novembre'), 12:('Décembre')
-    }
     date_widget = forms.SelectDateWidget(months=MONTHS)
     coming_date = forms.DateField(label="Date d'arrivée", widget=date_widget, help_text='Date de début du séjour')
     leaving_date = forms.DateField(label='Date de départ', widget=date_widget, help_text='Date de fin du séjour')

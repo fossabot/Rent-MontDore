@@ -1,8 +1,11 @@
+from calendar import Calendar, HTMLCalendar
+
 from django.shortcuts import render, redirect
 
 # Create your views here.
 
 from .forms import BookingForm
+from booking.data import MONTHS
 from .models import Booking
 
 def booking(request):
@@ -59,6 +62,7 @@ def booking(request):
 
 def calendar(request):
     bookings = Booking.objects.order_by('coming_date')
-    admin = False
     admin = True
+    months_range = range(1, 31)
+    months = list(MONTHS.values())
     return render(request, 'booking/calendar.html', locals())

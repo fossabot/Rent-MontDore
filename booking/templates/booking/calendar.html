@@ -1,4 +1,5 @@
 {% extends "booking/booking_base.html" %}
+{% load helpers %}
 
 {% block title %}Calendrier{% endblock %}
 
@@ -9,7 +10,7 @@
       <p>Arrivée: {{ booking.coming_date|date:"d/m/Y" }}</p>
       <p>Départ: {{ booking.leaving_date|date:"d/m/Y" }}</p>
       {% if admin %}
-        <h2>{{ booking.last_name }}, {{ booking.first_name }}</h2>
+        <h2>{{ booking.last_name }} {{ booking.first_name }}</h2>
         <p>Email: {{ booking.email_address }}</p>
         <p>Cure:
           {% if booking.cure %}
@@ -19,8 +20,26 @@
           {% endif %}
         </p>
       {% endif %}
+    </div>
   {% empty %}
     <p>Aucune réservation.</p>
-  </div>
   {% endfor %}
+  <div id="calendar">
+    <table>
+      <tr>
+        <th></th>
+        {% for month in months %}
+          <th>{{ month }}</th>
+        {% endfor %}
+      </tr>
+      {% for day in months_range %}
+        <tr>
+          <td>{{ day }}</td>
+          {% for month in months %}
+            <td></td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
 {% endblock %}
