@@ -9,9 +9,17 @@ nav .app-navbar li {
 nav .app-navbar a {
   border-radius: 5px;
   padding: 5px 20px;
-  margin: 0px 10px;
+  margin: 5px 10px;
 }
 
 nav .active a {
   background-color: #aaa;
+}
+
+@media screen and (max-width: 1024px) {
+  nav .app-navbar {
+    margin: auto;
+    width: 85%;
+    text-align: center;
+  }
 }

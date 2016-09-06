@@ -53,3 +53,26 @@ footer a, footer p {
   color: currentColor;
   text-decoration: none;
 }
+
+@media screen and (max-width: 1024px) {
+  section {
+    margin: 0 auto;
+    width: 90%;
+  }
+  nav ul {
+    display: block;
+  }
+  nav .main-navbar {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 85%;
+    text-align: center;
+  }
+  nav .main-navbar li {
+    display: inline-block;
+  }
+  nav .main-navbar a {
+    padding: 8px 50px;
+    width: 72px;
+
+/* transition: opacity 1s linear; */
