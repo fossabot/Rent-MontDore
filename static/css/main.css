@@ -48,7 +48,7 @@ footer {
 }
 
 footer a, footer p {
-  margin: 15px 50px;
+  margin: 5px 50px;
   display: inline-block;
   color: currentColor;
   text-decoration: none;
@@ -58,6 +58,7 @@ footer a, footer p {
   section {
     margin: 0 auto;
     width: 90%;
+    min-height: 315px;
   }
   nav ul {
     display: block;

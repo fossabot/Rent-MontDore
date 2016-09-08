@@ -33,3 +33,18 @@ td  {
     height: 20px;
     border: 1px solid black;
 }
+
+@media screen and (max-width: 1024px) {
+  nav .app-navbar {
+    margin: auto;
+    width: 85%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .field-wrapper label,
+  .field-wrapper input {
+    display: block;
+  }
+}

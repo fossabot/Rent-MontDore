@@ -17,9 +17,7 @@ nav .active a {
 }
 
 @media screen and (max-width: 1024px) {
-  nav .app-navbar {
-    margin: auto;
-    width: 85%;
-    text-align: center;
+  iframe {
+    width: 90%;
   }
 }
