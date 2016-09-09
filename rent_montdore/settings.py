@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'presentation',
     'booking',
+    'contact',
 ]
 
 MIDDLEWARE = [

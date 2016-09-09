@@ -25,9 +25,9 @@ nav a:hover {
   color: white;
 }
 
-.nav-presentation .nav-presentation,
-.nav-booking .nav-booking,
-.nav-pictures .nav-pictures {
+.nav-presentation .a-presentation,
+.nav-booking .a-booking,
+.nav-contact .a-contact {
   background-color: #aaa;
 }
 
@@ -40,6 +40,14 @@ section {
 h1 {
   font-size: 26px;
   margin: 20px 0px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+p span {
+  font-weight: bold;
 }
 
 footer {

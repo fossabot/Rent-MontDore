@@ -2,7 +2,6 @@ import datetime
 
 from django import forms
 
-from booking.models import Booking
 from booking.data import MONTHS
 
 class BookingForm(forms.Form):

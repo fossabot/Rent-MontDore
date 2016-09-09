@@ -1,17 +1,19 @@
-{% extends "booking/booking_base.html" %}
+{% extends "base.html" %}
 {% load staticfiles %}
+
+{% block title %}Contact{% endblock %}
 
 {% block stylesheet %}
 <link rel="stylesheet" href="{% static 'css/apps.css' %}" />
 <link rel="stylesheet" href="{% static 'css/forms.css' %}" />
-<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}" />
+<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}" />
 {% endblock %}
 
-{% block title %}Réservation{% endblock %}
+{% block navname %}contact{% endblock %}
 
 {% block content %}
-  <h1>Page de réservation</h1>
-  <form action="{% url "booking" %}" method="post">
+  <h1>Formulaire de contact</h1>
+  <form action="{% url "contact" %}" method="post">
     {% csrf_token %}
     <div><p class="msg">{{ msg }}</p></div>
     {{ form.non_field_errors }}
@@ -33,7 +35,6 @@
         {% endif %}
       </div>
     {% endfor %}
-    <div><input type="submit" value="Réserver!" /></div>
+    <div><input type="submit" value="Envoyer" /></div>
   </form>
-
 {% endblock %}
