@@ -10,7 +10,7 @@
 {% block navname %}booking{% endblock %}
 
 {% block navbar %}
-  <ul class="app-navbar">
+  <ul>
     <li {% if request.resolver_match.url_name == "booking-home-price" %}class="active"{% endif %}>
       <a href="{% url "booking-home-price" %}">Tarifs</a>
     </li>

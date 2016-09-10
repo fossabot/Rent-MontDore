@@ -1,22 +1,28 @@
-nav .app-navbar {
-  margin-left: 25%;
+.app-nav {
+  text-align: center;
+  width: 100%;
 }
 
-nav .app-navbar li {
+.app-nav li {
+  margin: 20px 0;
   display: inline-block;
 }
 
-nav .app-navbar a {
-  border-radius: 5px;
+.app-nav a {
+  text-decoration: none;
+  color: #333;  border-radius: 5px;
   padding: 5px 20px;
   margin: 5px 10px;
 }
 
-nav .active a {
+.active a {
   background-color: #aaa;
 }
 
 @media screen and (max-width: 1024px) {
+  .app-nav li {
+    margin: 10px 0;
+  }
   iframe {
     width: 90%;
   }

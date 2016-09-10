@@ -9,7 +9,7 @@
 {% block navname %}presentation{% endblock %}
 
 {% block navbar %}
-  <ul class="app-navbar">
+  <ul>
     <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}>
       <a href="{% url "home" %}">Accueil</a>
     </li>

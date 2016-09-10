@@ -14,17 +14,21 @@
     <header>
       <img src="{% static 'img/header-img.png' %}" alt="Panorama montagne" >
     </header>
-    <nav>
-      <ul class="main-navbar nav-{% block navname %}generic{% endblock %}">
+    <nav class="main-nav">
+      <ul class="nav-{% block navname %}generic{% endblock %}">
         <li><a class="a-presentation" href="{% url "home" %}">Accueil</a></li>
         <li><a class="a-booking" href="{% url "booking-home-price" %}">Réserver</a></li>
         <li><a class="a-contact" href="{% url "contact" %}">Contact</a></li>
       </ul>
-      {% block navbar %}{% endblock %}
     </nav>
-    <section>
-      {% block content %}{% endblock %}
-    </section>
+    <div id="content-wrapper">
+      <nav class="app-nav">
+        {% block navbar %}{% endblock %}
+      </nav>
+      <section>
+        {% block content %}{% endblock %}
+      </section>
+    </div>
     <footer>
       <a href="{% url "home" %}">Location Mont Dore</a>
       <a href="{% url "webmaster" %}">Webmaster</a>
