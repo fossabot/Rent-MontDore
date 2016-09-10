@@ -32,8 +32,8 @@ nav ul {
 
 .main-nav a {
   display: block;
-  background-color: #eee;
   text-decoration: none;
+  background-color: #eee;
   color: #333;
   padding: 16px 8px;
 }
@@ -41,6 +41,11 @@ nav ul {
 nav a:hover {
   background-color: #aaa;
   color: white;
+}
+
+.a-small a {
+  background-color: #fff;
+  font-size: small;
 }
 
 .nav-presentation .a-presentation,
