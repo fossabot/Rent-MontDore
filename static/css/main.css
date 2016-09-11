@@ -9,7 +9,6 @@ header img {
 
 #content-wrapper {
   width: 75%;
-  padding-bottom: 30px;
 }
 
 nav {
@@ -57,11 +56,19 @@ nav a:hover {
 section {
   padding-left: 15px;
   padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 h1 {
-  font-size: 26px;
-  margin: 20px 0px;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 12px 0;
 }
 
 p {
@@ -70,6 +77,10 @@ p {
 
 p span {
   font-weight: bold;
+}
+
+table {
+  width: 100%;
 }
 
 footer {
@@ -106,5 +117,10 @@ footer a, footer p {
   .main-nav a {
     padding: 8px 50px;
     width: 72px;
+  }
+  h1 {
+    text-align: left;
+  }
+}
 
 /* transition: opacity 1s linear; */
