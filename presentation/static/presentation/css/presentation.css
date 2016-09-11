@@ -26,6 +26,14 @@ th, td {
   margin-right: 12%;
 }
 
+#wishes {
+  margin-left: 30px;
+}
+
+#wishes li {
+  margin: 10px;
+}
+
 @media screen and (max-width: 1170px) {
   iframe {
     width: 800px;

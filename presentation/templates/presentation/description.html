@@ -5,4 +5,10 @@
 {% block content %}
   <h1>L'appartement</h1>
   <p>Description des pièces et équipements</p>
+  <p>Envie...</p>
+  <ul id="wishes">
+    {% for wish in wishes %}
+      <li>...{{ wish }}</li>
+    {% endfor %}
+  </ul>
 {% endblock %}

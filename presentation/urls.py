@@ -9,11 +9,7 @@ urlpatterns = [
         TemplateView.as_view(template_name='presentation/home.html'),
         name='home'
     ),
-    url(
-        r'^presentation/description$',
-        TemplateView.as_view(template_name='presentation/description.html'),
-        name='description'
-    ),
+    url(r'^presentation/description$', views.description, name='description'),
     url(
         r'^presentation/acces$',
         TemplateView.as_view(template_name='presentation/entrance.html'),
