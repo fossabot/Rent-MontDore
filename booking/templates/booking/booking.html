@@ -1,4 +1,4 @@
-{% extends "booking/booking_base.html" %}
+{% extends "base.html" %}
 {% load staticfiles %}
 
 {% block stylesheet %}
@@ -8,6 +8,22 @@
 {% endblock %}
 
 {% block title %}Réservation{% endblock %}
+
+{% block navname %}booking{% endblock %}
+
+{% block navbar %}
+  <ul>
+    <li {% if request.resolver_match.url_name == "booking-home-price" %}class="active"{% endif %}>
+      <a href="{% url "booking-home-price" %}">Tarifs</a>
+    </li>
+    <li {% if request.resolver_match.url_name == "booking" %}class="active"{% endif %}>
+      <a href="{% url "booking" %}">Réservation</a>
+    </li>
+    <li {% if request.resolver_match.url_name == "calendar" %}class="active"{% endif %}>
+      <a href="{% url "calendar" %}">Disponibilités</a>
+    </li>
+  </ul>
+{% endblock %}
 
 {% block content %}
   <h1>Page de réservation</h1>
@@ -35,5 +51,4 @@
     {% endfor %}
     <div><input type="submit" value="Réserver!" /></div>
   </form>
-
 {% endblock %}
