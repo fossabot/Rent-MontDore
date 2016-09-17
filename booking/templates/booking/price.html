@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% load static %}
 
 {% block stylesheet %}
 <link rel="stylesheet" href="{% static 'css/apps.css' %}" />
 <link rel="stylesheet" href="{% static 'booking/css/booking.css' %}" />
 {% endblock %}
+
+{% block title %}Réserver{% endblock %}
 
 {% block navname %}booking{% endblock %}
 
@@ -21,4 +22,8 @@
       <a href="{% url "calendar" %}">Disponibilités</a>
     </li>
   </ul>
+{% endblock %}
+
+{% block content %}
+  <h1>Tarifs</h1>
 {% endblock %}
