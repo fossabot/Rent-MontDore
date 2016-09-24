@@ -1,6 +1,28 @@
-{% extends "presentation/presentation_base.html" %}
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/apps.css' %}" />
+<link rel="stylesheet" href="{% static 'presentation/css/presentation.css' %}" />
+{% endblock %}
 
 {% block title %}Accès{% endblock %}
+
+{% block navname %}presentation{% endblock %}
+
+{% block navbar %}
+  <ul>
+    <li {% if request.resolver_match.url_name == "home" %}class="active"{% endif %}>
+      <a href="{% url "home" %}">Accueil</a>
+    </li>
+    <li {% if request.resolver_match.url_name == "description" %}class="active"{% endif %}>
+      <a href="{% url "description" %}">Déscription</a>
+    </li>
+    <li {% if request.resolver_match.url_name == "entrance" %}class="active"{% endif %}>
+      <a href="{% url "entrance" %}">Accès</a>
+    </li>
+  </ul>
+{% endblock %}
 
 {% block content %}
   <h1>Accés au Mont Dore</h1>
@@ -41,6 +63,8 @@
   </div>
   <div id="map">
     <h2>Accès</h2>
+    <p>Si vous prenez l'autoroute A89, le Mont Dore ce trouve à seulement une heure de route environ en prenant la sortie 25.</br>
+      Sinon vous pouvez passer par Clermont-Ferrand et sortir de l'A75 à la sortie 5.</p>
     <p>Voici une carte d'accées au Mont Dore.</p>
     <iframe
       width="900"
@@ -52,8 +76,9 @@
       src="http://www.openstreetmap.org/export/embed.html?bbox=2.732419967651367%2C45.55054180487325%2C2.87017822265625%2C45.604490626830845&amp;layer=mapnik">
     </iframe>
     </br>
-    <a href="http://www.openstreetmap.org/#map=13/45.5781/2.7942">Voir la carte en plus grand.</a>
-    <p>Indiquer votre position pour calculer un itinéraire.</p>
-    <p>Télécharger une carte du Mont Dore ou une carte d'accés au Mont Dore, les plans des pistes ski et ski de fond et randonnée</p>
+    <p>Cliquez sur ce lien pour <a href="http://www.openstreetmap.org/#map=13/45.5781/2.7942">voir la carte en plus grand.</a></p>
+    <p>Le site internet du <a href="http://www.sancy.com/commune/mont-dore">massif du Sancy</a> propose des cartes telles que les
+      plans des pistes de ski, de ski de fond, et des cartes de randonnées.
+    N'hésitez pas à le visiter, vous y trouver pleins d'informations.</p>
   </div>
 {% endblock %}

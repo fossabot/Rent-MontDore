@@ -25,12 +25,29 @@
 {% endblock %}
 
 {% block content %}
-  <h1>L'appartement</h1>
-  <p>Description des pièces et équipements</p>
-  <p>Envie...</p>
-  <ul id="wishes">
-    {% for wish in wishes %}
-      <li>...{{ wish }}</li>
-    {% endfor %}
-  </ul>
+  <div>
+    <h1>L'appartement</h1>
+    <p class="big">Envie...</p>
+    <ul id="wishes">
+      {% for wish in wishes %}
+        <li>...{{ wish }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <h2>Déscription des pièces et équipements :</h2>
+    <p>Vous trouverez <a class="room" href="#room">une chambre</a>, la <a class="room" href="#main">pièce principale</a>
+       une <a class="room" href="#bath-room">salle de bain</a> et un petit <a class="room" href="#balcony">balcon</a>.</p>
+    <h3 id="main">La pièce principale</h3>
+    <p>On y trouve le séjour et la coin cuisine. Dans cette pièce ce trouve une table accompagnée de 4 chaises, un canapé convertible et une télévision.
+      Un bar sépare cette espace du coin cuisine, dans lequel vous trouverez un un évier, un micro-onde, des plaques de cuisons,
+      un lave vaisslles et plusieurs placards. Pour ce qui est des équipements, vous aurez à votre disposition
+      un cuiseur vapeur, un robot et d'autre ustenàsiles de cuisine.</p>
+    <h3 id="room">La chambre</h3>
+    <p>Il y a un lit deux places et un lit d'appoint ainsi qu'une commode comportant 3 tiroirs.</p>
+    <h3 id="bath-room">La salle de bain</h3>
+    <p>Vous y trouverez une baignoire, un lavabo et un lave-linge, ainse qu'un miroir et des étagères de rangements.</p>
+    <h3 id="balcony">Le balcon</h3>
+    <p>Sur le balcon se trouve une table et deux fauteuils.</p>
+  </div>
 {% endblock %}
