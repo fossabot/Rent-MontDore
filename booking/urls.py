@@ -10,5 +10,5 @@ urlpatterns = [
         name='booking-home-price'
     ),
     url(r'^reservation/$', views.booking, name='booking'),
-    url(r'^calendrier/$', views.calendar, name='calendar'),
+    url(r'^calendrier/(?P<current_year>\d+)$', views.calendar, name='calendar'),
 ]

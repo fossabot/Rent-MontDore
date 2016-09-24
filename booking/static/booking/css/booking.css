@@ -14,3 +14,9 @@ td  {
     height: 20px;
     border: 1px solid black;
 }
+.reserved {
+  background-color: #888;
+}
+.available {
+  background-color: #bbb;
+}

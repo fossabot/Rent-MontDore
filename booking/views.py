@@ -1,4 +1,4 @@
-from calendar import Calendar, HTMLCalendar
+from datetime import date
 
 from django.shortcuts import render, redirect
 
@@ -60,9 +60,21 @@ def booking(request):
 
     return render(request, 'booking/booking.html', locals())
 
-def calendar(request):
-    bookings = Booking.objects.order_by('coming_date')
-    admin = True
-    months_range = range(1, 31)
+def calendar(request, current_year):
     months = list(MONTHS.values())
+    current_year = int(current_year)
+    year = dict()
+    for day in range(1, 32):
+        year[day] = list()
+        for month_number, month_name in MONTHS.items():
+            try:
+                current_date = date(current_year, month_number, day)
+            except ValueError:
+                year[day].append("")
+            else:
+                selected_bookings = Booking.objects.filter(coming_date__lte=current_date).filter(leaving_date__gte=current_date)
+                if len(selected_bookings) != 0:
+                    year[day].append("reserved")
+                else:
+                    year[day].append("available")
     return render(request, 'booking/calendar.html', locals())

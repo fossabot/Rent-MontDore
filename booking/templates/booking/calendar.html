@@ -20,45 +20,30 @@
       <a href="{% url "booking" %}">Réservation</a>
     </li>
     <li {% if request.resolver_match.url_name == "calendar" %}class="active"{% endif %}>
-      <a href="{% url "calendar" %}">Disponibilités</a>
+      <a href="{% url "calendar" 2016 %}">Disponibilités</a>
     </li>
   </ul>
 {% endblock %}
 
 {% block content %}
   <h1>Calendrier</h1>
-  {% for booking in bookings %}
-    <div class="booking">
-      <p>Arrivée: {{ booking.coming_date|date:"d/m/Y" }}</p>
-      <p>Départ: {{ booking.leaving_date|date:"d/m/Y" }}</p>
-      {% if admin %}
-        <h2>{{ booking.last_name }} {{ booking.first_name }}</h2>
-        <p>Email: {{ booking.email_address }}</p>
-        <p>Cure:
-          {% if booking.cure %}
-            oui
-          {% else %}
-            non
-          {% endif %}
-        </p>
-      {% endif %}
-    </div>
-  {% empty %}
-    <p>Aucune réservation.</p>
-  {% endfor %}
+  <p>Voici le calendrier des réservations.</p>
+  <p>Choisissez une année :<p>
+  <a class="year" href="{% url "calendar" 2016 %}">2016</a>
+  <a class="year" href="{% url "calendar" 2017 %}">2017</a>
   <div id="calendar">
     <table>
       <tr>
         <th></th>
-        {% for month in months %}
+        {% for month in months %} <!-- jan to dec -->
           <th>{{ month }}</th>
         {% endfor %}
       </tr>
-      {% for day in months_range %}
+      {% for day, month in year.items %} <!-- 1 to 31 -->
         <tr>
           <td>{{ day }}</td>
-          {% for month in months %}
-            <td></td>
+          {% for state in month %}
+            <td class="{{ state }}"></td>
           {% endfor %}
         </tr>
       {% endfor %}

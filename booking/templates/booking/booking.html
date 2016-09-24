@@ -20,7 +20,7 @@
       <a href="{% url "booking" %}">Réservation</a>
     </li>
     <li {% if request.resolver_match.url_name == "calendar" %}class="active"{% endif %}>
-      <a href="{% url "calendar" %}">Disponibilités</a>
+      <a href="{% url "calendar" 2016 %}">Disponibilités</a>
     </li>
   </ul>
 {% endblock %}
