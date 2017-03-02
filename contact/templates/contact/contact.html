@@ -13,7 +13,7 @@
 
 {% block content %}
   <h1>Formulaire de contact</h1>
-  <p>Pour tous renseignements complémentaires, vous pouvez nous contacter au 06 80 03 66 49, ou par mail à <a href="mailto:l.seva@free.fr">l.seva@free.fr</a></p>.
+  <p>Pour tous renseignements complémentaires, vous pouvez nous contacter au 06 80 03 66 49, ou par mail à <a href="mailto:l.seva@free.fr">l.seva@free.fr</a>.</p>
   <form action="{% url "contact" %}" method="post">
     {% csrf_token %}
     <div><p class="msg">{{ msg }}</p></div>
