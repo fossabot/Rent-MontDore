@@ -20,7 +20,7 @@
       <a href="{% url "booking" %}">Réservation</a>
     </li>
     <li {% if request.resolver_match.url_name == "calendar" %}class="active"{% endif %}>
-      <a href="{% url "calendar" 2016 %}">Disponibilités</a>
+      <a href="{% url "calendar" 2017 %}">Disponibilités</a>
     </li>
   </ul>
 {% endblock %}
@@ -28,9 +28,6 @@
 {% block content %}
   <h1>Calendrier</h1>
   <p>Voici le calendrier des réservations.</p>
-  <p>Choisissez une année :<p>
-  <a class="year" href="{% url "calendar" 2016 %}">2016</a>
-  <a class="year" href="{% url "calendar" 2017 %}">2017</a>
   <div id="calendar">
     <table>
       <tr>
