@@ -21,6 +21,6 @@ def contact(request):
 
     else:
         form = ContactForm()
-        msg = "Veuillez remplir le formulaire:"
+        msg = "Vous pouvez aussi remplir ce formulaire :"
 
     return render(request, 'contact/contact.html', locals())
