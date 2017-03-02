@@ -56,7 +56,7 @@ def booking(request):
             msg = 'Le formulaire est invalide.'
     else:
         form = BookingForm()
-        msg = "Veuillez remplir le formulaire:"
+        msg = "Pour envoyer une demande de réservation, remplissez le formulaire :"
 
     return render(request, 'booking/booking.html', locals())
 
